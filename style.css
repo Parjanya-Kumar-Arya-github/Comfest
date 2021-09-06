@@ -1,0 +1,374 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+body{
+	overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: teal;
+}
+@keyframes navbar{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+footer{
+	position: fixed;
+	width: 100vw;
+	height: auto;
+	bottom: 0;
+	left: 0;
+	background-color: teal;
+	text-align: center;
+}
+footer p{
+	font-family: Poppins;
+	color: white;
+}
+.header{
+	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('Images/Closing Ceremony.jpg');
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+.navbar{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+.navbar h2{
+	font-size: 40px;
+	font-family: Poppins;
+	color: white;
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: white;
+	font-family: Poppins;
+	font-weight: 300;
+	font-size: 20px;
+	transition: 0.5s;
+}
+.navbar ul::nth-child(1) {
+	animation-name: navbar;
+	animation-duration: 1s;
+}
+.navbar ul::nth-child(2) {
+	animation-name: navbar;
+	animation-duration: 2s;
+}.navbar ul::nth-child(3) {
+	animation-name: navbar;
+	animation-duration: 3s;
+}.navbar ul::nth-child(4) {
+	animation-name: navbar;
+	animation-duration: 4s;
+}
+
+.navbar ul li a:hover{
+	color: teal;}
+
+.navbar ul li::after{
+	content: '';
+	width: 0%;
+	height: 3px;
+	background: teal;
+	display: block;
+	margin: auto;
+	border-radius: 2px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+
+}
+.text-box{
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.text-box h1{
+	font-size: 60px;
+	font-family: Poppins;
+}
+.text-box p{
+	margin: 10px 0 40px;
+	font-family: Poppins;
+
+}
+.text-box a{
+	display: inline-block;
+	text-decoration:none;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 40px;
+	font-family: Poppins;
+	padding: 12px 34px;
+	background: transparent;
+	position: relative;
+	transition: 0.75s;
+}
+.text-box a:hover{
+	border: 1px solid teal;
+	background: teal;
+}
+
+.history{
+	padding-top: 100px;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+.history h1{
+	font-family: Poppins;
+	color: #000;
+	font-size: 50px;
+}
+
+.history p{
+	color: #000;
+	font-family: Poppins;
+	font-size: 15px;
+}
+
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.row h3{
+	font-family: Poppins;
+	font-size: 20px;
+}
+.history-col{
+	flex-basis: 31%;
+	background: rgba(0,128,128,0.2);
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 15px 7.5px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+.history-col:hover{
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.gallery{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+.gallery h1{
+	font-family: Poppins;
+	color: #000;
+	font-size: 50px;
+}
+
+.gallery p{
+	color: #000;
+	font-family: Poppins;
+	font-size: 15px;
+}
+.gallery-col{
+	flex-basis: 20%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow-x: hidden;
+}
+.gallery-col img{
+	width: 100%;
+	height: 200px;
+}
+.app-col img{
+	width: 100%;
+	height: 200px;
+	border-radius: 10px;
+}
+
+.layers{
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+.layers:hover{
+	background: rgba(0,128,128,0.5);
+}
+.layers h3{
+	width: 100%;
+	font-weight: 400;
+	font-size: 20px;
+	font-family: Poppins;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	color: white;
+	opacity: 0;
+	margin-bottom: 10px;
+	transition: 0.5s;
+}
+.layers p{
+	width: 100%;
+	font-weight: 400;
+	font-size: 10px;
+	font-family: Poppins;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	color: white;
+	transition: 0.5s;
+	opacity: 0;
+}
+.layers:hover h3{
+	bottom: 49%;
+	opacity: 1;
+}
+.layers:hover p{
+	bottom: 40%;
+	opacity: 1;
+}
+.appreciation{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+.appreciation h1{
+	color: #000;
+	font-family: Poppins;
+	font-size: 40px;
+	/*font-weight: 500;*/
+}
+.appreciation p{
+	color: #000;
+	font-family: Poppins;
+	font-size: 20px;
+	/*font-weight: 500;*/
+}
+.app-col{
+	flex-basis: 31%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	/*position: relative;*/
+	/*overflow-x: hidden;*/
+	text-align: center;
+	align-items: center;
+}
+.app-col h3{
+	text-align: center;
+	
+}
+.app-col p{
+	font-size: 12px;
+	padding: 0;
+}
+.app-col a{
+	display: inline-block;
+	text-decoration:none;
+	margin: 3px;
+	color: #000;
+	border: 1px solid #000;
+	border-radius: 40px;
+	font-family: Poppins;
+	padding: 12px 34px;
+	background: transparent;
+	position: relative;
+	transition: 0.75s;
+}
+.app-col a:hover{
+	border: 1px solid teal;
+	background: teal;
+}
+.Last{
+	margin: 100px auto;
+	width: 80%;
+	height: 200px;
+	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('Images/Closing Ceremony.jpg');
+	text-align: center;
+	border-radius: 10px;
+}
+.Last h1{
+	color: white;
+	font-family: Poppins;
+	position: relative;
+	top: 30%;
+}
+.Last a{
+	display: inline-block;
+	text-decoration:none;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 40px;
+	font-family: Poppins;
+	padding: 12px 34px;
+	background: transparent;
+	position: relative;
+	transition: 0.75s;
+	position: relative;
+	top: 35%;
+}
+.Last a:hover{border: 1px solid teal;
+	background: teal;
+}
+@media (max-width: 760px){
+	.row{
+		flex-direction: column;
+	}
+	h1,h2,h3{
+		font-size: 20px;
+	}
+	p{
+		font-size: 10px;
+	}
+.navbar ul li a{
+	
+	display: none;
+	}
+	.navbar h2{
+	display: none;
+}
+.Last h1{
+	font-size: 14px;
+
+}
+.Last a{
+	font-size: 10px;
+}
+footer p{
+	font-size: 10px;
+}
+}
